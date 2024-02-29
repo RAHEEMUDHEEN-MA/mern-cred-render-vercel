@@ -14,7 +14,8 @@ const Home = () => {
   const [city, setcity] = useState("");
 
   useEffect(() => {
-    axios
+    const fetchUser=async()=>{
+     await axios
       .get(`${BASE_URL}/users`)
       .then((response) => {
         setUsers(response.data.users);
@@ -22,6 +23,8 @@ const Home = () => {
       .catch((err) => {
         console.log(err);
       });
+    }
+    fetchUser()
   }, []);
 
   const handleDelete = (_id) => {

@@ -22,7 +22,7 @@ const Edit = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, [uid]);
+  }, [uid.id]);
 
   const handleSave = () => {
     if (name === "" || phone === "" || city === "") {
@@ -38,7 +38,11 @@ const Edit = () => {
       .catch((err) => {
         console.log(err);
       });
-      Navigate("/")
+setTimeout(() => {
+  Navigate("/")
+}, 1000);
+
+    
   };
   return (
     <div
