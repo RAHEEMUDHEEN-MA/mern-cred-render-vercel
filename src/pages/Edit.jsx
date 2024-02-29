@@ -40,7 +40,7 @@ const Edit = () => {
       });
 setTimeout(() => {
   Navigate("/")
-}, 1000);
+}, 200);
 
     
   };
